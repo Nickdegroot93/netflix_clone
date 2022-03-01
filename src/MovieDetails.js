@@ -51,9 +51,6 @@ const MovieDetails = ({ movie, closeMovie }) => {
 		getGenres();
 	}, [movie]);
 
-	console.log(movieInfo);
-	console.log(genres);
-
 	// Round off the votes
 	function voteFormar(value) {
 		// Nine Zeroes for Billions
