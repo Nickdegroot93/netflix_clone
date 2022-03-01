@@ -1,0 +1,60 @@
+.row {
+	margin-left: 1rem;
+}
+
+.row:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.row__title {
+	font-size: 1rem;
+	font-weight: 700;
+	padding-left: 0.8rem;
+}
+
+.row__posters {
+	display: flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+}
+
+.row__posters::-webkit-scrollbar {
+	display: none;
+}
+
+.row__poster {
+	border-radius: 0.5rem;
+	width: 100%;
+	max-height: 10rem;
+	object-fit: contain;
+	transition: transform 450ms;
+}
+
+.row__poster:not(:last-child) {
+	margin-right: 0.3rem;
+}
+
+.row__posterLarge {
+	max-height: 18rem;
+}
+
+.row__posterLarge:hover {
+	transform: scale(1.1);
+	z-index: 3;
+}
+
+.row__poster:hover {
+	transform: scale(1.07);
+	z-index: 3;
+}
+
+@media only screen and (max-width: 700px) {
+	.row__poster {
+		max-height: 7rem;
+	}
+
+	.row__posterLarge {
+		max-height: 13rem;
+	}
+}

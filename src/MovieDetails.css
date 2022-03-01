@@ -1,0 +1,166 @@
+.movie {
+	position: relative;
+}
+
+.movie__banner {
+	height: 37rem;
+	background-size: cover;
+	object-fit: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1rem;
+	mask-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 1) 61%,
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.movie__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.movie__info {
+	width: 70%;
+	margin-right: 1rem;
+	padding: 1rem 1rem 3rem 1rem;
+}
+
+.movie__info-primary {
+	padding-left: 3rem;
+}
+
+.movie__info-secondary {
+	padding-left: 3rem;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.movie__rating {
+	margin-right: 2rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+.movie__year {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+.movie__year::before {
+	content: ' ';
+}
+
+.movie__rating span {
+	color: rgb(145, 145, 145);
+	font-size: 1rem;
+}
+
+.movie__title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.movie__description {
+	font-size: 1rem;
+	line-height: 1.4;
+	max-width: 35rem;
+}
+
+.movie__trailer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.movie__genre {
+	font-size: 1rem;
+	font-weight: 400;
+	color: rgb(145, 145, 145);
+}
+
+.movie__genre:not(:last-child)::after {
+	content: ' - ';
+}
+
+.movie__error {
+	padding: 2rem;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	background-color: #141414;
+}
+
+.movie__error div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 0.5rem;
+}
+
+.movie__error span {
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+.movie__loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-size: 2rem;
+	padding: 2rem;
+	border-radius: 5px;
+	background-color: #141414;
+}
+
+.movie__back-icon {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	font-size: 4rem;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.movie__back-icon:hover {
+	transform: scale(1.03);
+}
+
+@media only screen and (max-width: 700px) {
+	.movie__info-primary {
+		padding-left: 0.5rem;
+	}
+	.movie__title {
+		font-size: 2rem;
+	}
+
+	.movie__description {
+		font-size: 0.8rem;
+	}
+
+	.movie__info {
+		width: 90%;
+		margin-right: 1rem;
+		padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+	}
+
+	.movie__info-secondary {
+		padding-left: 0.5rem;
+	}
+}
